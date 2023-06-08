@@ -2,7 +2,7 @@ package backjoon;
 
 import java.util.Scanner;
 
-public class al_5597_과제제출 {
+public class al_24_5597_과제제출 {
 
 	public static void main(String[] args) {
 
