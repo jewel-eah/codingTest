@@ -25,21 +25,33 @@ public class al_26_10811_바구니뒤집기 {
 			System.out.println(basket[b]+ " ");
 		}
 		
-		
-		for(int i=0; i<roop; i++) {
-			int start = scan.nextInt()-1;
-			int end = scan.nextInt()-1;
-			
-			if(end-start <= 1) {
-				end +=1;
+		while(roop>0) {
+			int start = scan.nextInt();
+			int end = scan.nextInt();
+			int sum = end-start;
+			if(start <= count && end <= count) {
+				if(sum > 1) {
+					int temp = basket[start];
+					for(int i=start; i<end; i++) {
+						basket[i] = basket[sum-i];
+					}
+					basket[end] = temp; 
+				}
+				else {
+					for(int i=start; i<end; i++) {
+						int temp = basket[start];
+						basket[i] = basket[i+1];
+						basket[i+1] = temp;
+					}
+				}
 			}
-			Arrays.sort(basket, start, end, Collections.reverseOrder());
-			
-			for(int k=0; k<basket.length; k++) {
-				System.out.print(basket[k] + " ");
-			}
+			roop --;
 		}
-		
+
+		for(int b=0; b<basket.length; b++) {
+			
+			System.out.println(basket[b]+ " ");
+		}
 	}
 
 }
