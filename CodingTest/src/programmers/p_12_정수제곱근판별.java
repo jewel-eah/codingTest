@@ -12,7 +12,7 @@ public class p_12_정수제곱근판별 {
 			long answer = -1;
 
 			for (long x = 1; x <= n/2; x++) {
-				if (n / x == x) {
+				if (n / x == x && n%x == 0) {
 					answer = (x + 1) * (x + 1);
 					break;
 				}
@@ -24,7 +24,7 @@ public class p_12_정수제곱근판별 {
 
 	public static void main(String[] args) {
 		CheckSqrt CheckSqrt = new CheckSqrt();
-		System.out.println("CheckSqrt:" + CheckSqrt.checkSqrt(122));
+		System.out.println("CheckSqrt:" + CheckSqrt.checkSqrt(121));
 
 	}
 
